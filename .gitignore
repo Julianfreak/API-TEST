@@ -1,0 +1,4 @@
+.env
+node_modules/
+# Ignorar todas las capturas PNG
+Captura desde *.png

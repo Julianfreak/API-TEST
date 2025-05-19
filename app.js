@@ -2,12 +2,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const Prueba = require("./models/prueba");
 const postRoutes = require("./routes/post");
+require("dotenv").config();
 const app = express();
 const port = 3000;
 
 app.use(express.json());
 
-const uri = "mongodb+srv://julianrideon:BFstmngjpCbzBXnB@cluster0.wnhvnr4.mongodb.net/API_REST?retryWrites=true&w=majority";
+const uri = process.env.MONGODB_URI;;
 
 mongoose
   .connect(uri)
