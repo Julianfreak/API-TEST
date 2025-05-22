@@ -1,0 +1,21 @@
+# Evita copiar dependencias locales
+node_modules
+
+# Ignora logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignora configuración del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignora archivos sensibles o que no pertenecen al código fuente
+.env
+*.png
+*.jpg
+*.jpeg
+
+# Ignora backups y temporales
+*.bak
+*.tmp
