@@ -23,25 +23,6 @@ app.get("/", (req, res) => {
   res.send("¡Hola desde la API!");
 });
 
-app.post("/pruebas", async (req, res) => {
-  try {
-    const nuevo = new Prueba(req.body);
-    const guardado = await nuevo.save();
-    res.status(201).json(guardado);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-});
-
-app.get("/pruebas", async (req, res) => {
-  try {
-    const pruebas = await Prueba.find();
-    res.json(pruebas);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
 app.use("/pruebas", postRoutes); 
 
 app.listen(port, () => {
